@@ -42,7 +42,7 @@ class modBasketWebOrdersSubmitProcessor extends modWebOrdersSubmitProcessor{
         }
         
         // Выполнеяем проверку данных
-        if(!$this->validateFields()){
+        if(!$this->validateFields()){ 
             return "Проверьте правильность заполнения формы";
         }
         
