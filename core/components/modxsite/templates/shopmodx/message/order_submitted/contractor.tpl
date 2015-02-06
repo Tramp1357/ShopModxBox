@@ -1,5 +1,11 @@
 {config name=site_url assign=site_url}
 
+{if $properties.password}
+    <h3>Вы зарегистрированы на сайте.</h3>
+    <p>Логин: {$Contractor.username}</p>
+    <p>Пароль: {$properties.password}</p>
+{/if}
+
 <h3 style="margin: 20px 0 50px;">
     <p>Номер заказа: <strong>{$order.id}</strong></p>
 </h3> 
