@@ -97,9 +97,11 @@ class modSiteWebGetlistProcessor extends modObjectGetListProcessor{
             }
             
             if ($this->flushWhere && isset($c->query['where'])) $c->query['where'] = array();
-            $c->where(array(
-                "{$this->classKey}.id:IN" => $IDs,
-            ));
+            if(count($IDs)) {
+                $c->where(array(
+                    "{$this->classKey}.id:IN" => $IDs,
+                ));
+            }
         }
         else{
             return false;
